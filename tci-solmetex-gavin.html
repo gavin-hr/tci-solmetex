@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>大江生醫 × Solmetex 跨國戰略合作互動提案</title>
+  <meta name="description" content="互動式網頁：大江生醫與美國牙科龍頭 Solmetex 跨國戰略合作方案介紹" />
+  <style>
+    :root{
+      --bg:#f6f2ea;
+      --bg2:#efe7d8;
+      --ink:#18212a;
+      --muted:#667085;
+      --line:rgba(24,33,42,.14);
+      --paper:rgba(255,255,255,.78);
+      --paper2:#fffaf1;
+      --accent:#0f766e;
+      --accent2:#0b4f6c;
+      --warm:#b7791f;
+      --risk:#b42318;
+      --green:#0f8a5f;
+      --shadow:0 24px 70px rgba(30,39,46,.16);
+      --radius:26px;
+      --radius-sm:16px;
+      --max:1180px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Microsoft JhengHei",Arial,sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(circle at 10% -10%, rgba(15,118,110,.18), transparent 35%),
+        radial-gradient(circle at 92% 6%, rgba(183,121,31,.18), transparent 32%),
+        linear-gradient(145deg,var(--bg),var(--bg2));
+      min-height:100vh;
+    }
+    a{color:inherit}
+    .progress{position:fixed;inset:0 0 auto 0;height:4px;background:linear-gradient(90deg,var(--accent),var(--warm));width:0;z-index:1000}
+    .wrap{max-width:var(--max);margin:auto;padding:0 24px}
+    .hero{position:relative;overflow:hidden;padding:54px 0 34px}
+    .hero:after{
+      content:"";position:absolute;right:-180px;top:-180px;width:460px;height:460px;border-radius:50%;
+      background:radial-gradient(circle, rgba(15,118,110,.18), transparent 68%);z-index:-1;
+    }
+    .topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:42px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.03em}
+    .mark{width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,var(--accent),var(--accent2));box-shadow:0 12px 30px rgba(15,118,110,.22);display:grid;place-items:center;color:#fff;font-weight:900}
+    .actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+    button,.btn{border:0;border-radius:999px;padding:10px 16px;font-weight:700;background:#fff;color:var(--ink);box-shadow:0 10px 30px rgba(24,33,42,.08);cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+    button:hover,.btn:hover{transform:translateY(-1px)}
+    .primary{background:var(--ink);color:#fff}.ghost{background:rgba(255,255,255,.62);backdrop-filter:blur(8px)}
+    .grid-hero{display:grid;grid-template-columns:1.08fr .92fr;gap:28px;align-items:stretch}
+    .eyebrow{display:inline-flex;gap:8px;align-items:center;color:var(--accent);font-weight:900;letter-spacing:.08em;text-transform:uppercase;font-size:13px;background:rgba(15,118,110,.09);padding:8px 12px;border-radius:999px}
+    h1{font-size:clamp(36px,6vw,74px);line-height:1.02;margin:20px 0 18px;letter-spacing:-.055em}
+    .lead{font-size:clamp(17px,2.2vw,22px);line-height:1.75;color:#354052;max-width:760px}
+    .hero-card{background:linear-gradient(180deg,rgba(255,255,255,.86),rgba(255,250,241,.86));border:1px solid rgba(255,255,255,.8);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+    .hero-card:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(15,118,110,.08),transparent 48%,rgba(183,121,31,.08));pointer-events:none}
+    .kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;position:relative}
+    .kpi{background:rgba(255,255,255,.72);border:1px solid var(--line);border-radius:20px;padding:18px;min-height:130px}
+    .kpi b{font-size:30px;display:block;letter-spacing:-.03em}.kpi span{color:var(--muted);line-height:1.5;font-size:14px}
+    .disclaimer{position:relative;margin-top:16px;color:var(--muted);font-size:13px;line-height:1.6}
+    .nav{position:sticky;top:0;z-index:99;background:rgba(246,242,234,.82);backdrop-filter:blur(14px);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .tabs{display:flex;gap:8px;overflow:auto;padding:12px 0}.tab{white-space:nowrap;background:transparent;border:1px solid transparent;box-shadow:none;color:#475467}.tab.active,.tab:hover{background:#fff;border-color:var(--line);color:var(--ink)}
+    section{padding:58px 0}.section-head{display:flex;justify-content:space-between;gap:22px;align-items:end;margin-bottom:24px}.section-title{margin:0;font-size:clamp(28px,3.2vw,42px);letter-spacing:-.035em}.section-sub{color:var(--muted);line-height:1.7;max-width:680px;margin:8px 0 0}
+    .panel{background:rgba(255,255,255,.64);border:1px solid rgba(255,255,255,.84);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+    .two{display:grid;grid-template-columns:1fr 1fr;gap:18px}.three{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.four{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .card{background:rgba(255,255,255,.68);border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:0 12px 32px rgba(24,33,42,.06)}
+    .card h3{margin:0 0 10px;font-size:22px;letter-spacing:-.02em}.card p{margin:0;color:#4b5563;line-height:1.7}.tag{display:inline-flex;align-items:center;gap:6px;border-radius:999px;background:rgba(15,118,110,.09);color:var(--accent);font-size:13px;font-weight:800;padding:6px 10px;margin-bottom:14px}.tag.warm{background:rgba(183,121,31,.12);color:#8a5a15}.tag.blue{background:rgba(11,79,108,.1);color:var(--accent2)}.tag.red{background:rgba(180,35,24,.10);color:var(--risk)}
+    .asset-map{display:grid;grid-template-columns:1fr 76px 1fr;gap:18px;align-items:stretch}.company{padding:26px}.company h3{font-size:26px;margin:0 0 12px}.asset{display:flex;gap:12px;align-items:flex-start;padding:14px 0;border-top:1px solid var(--line)}.asset:first-of-type{border-top:0}.asset-icon{flex:0 0 34px;width:34px;height:34px;border-radius:12px;background:rgba(15,118,110,.1);display:grid;place-items:center}.bridge{display:flex;align-items:center;justify-content:center}.bridge span{width:76px;height:76px;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:white;font-weight:900;box-shadow:0 20px 40px rgba(24,33,42,.22)}
+    .proposal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.proposal{position:relative;min-height:300px;cursor:pointer;transition:.2s}.proposal:hover{transform:translateY(-3px)}.proposal .num{font-weight:900;font-size:13px;color:var(--muted);letter-spacing:.08em}.proposal h3{font-size:21px;line-height:1.25}.proposal ul{padding-left:18px;margin:16px 0 0;color:#4b5563;line-height:1.65}.proposal.active{outline:3px solid rgba(15,118,110,.22);background:#fff}
+    .detail{margin-top:18px;padding:0}.detail-inner{display:grid;grid-template-columns:.95fr 1.05fr;gap:0}.detail-visual{padding:28px;background:linear-gradient(135deg,rgba(15,118,110,.1),rgba(183,121,31,.08));border-right:1px solid var(--line)}.detail-copy{padding:28px}.detail h3{font-size:30px;margin:0 0 10px}.detail p{color:#4b5563;line-height:1.8}.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.chip{padding:8px 11px;border-radius:999px;background:rgba(255,255,255,.7);border:1px solid var(--line);font-size:13px;color:#475467}
+    .flow{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:18px}.flow-item{background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px 14px;font-weight:800}.arrow{color:var(--muted);font-weight:900}
+    .timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.phase{background:rgba(255,255,255,.74);border:1px solid var(--line);border-radius:22px;padding:22px;cursor:pointer}.phase:hover,.phase.active{background:#fff;outline:3px solid rgba(183,121,31,.18)}.phase small{color:var(--warm);font-weight:900;letter-spacing:.06em}.phase h3{font-size:24px;margin:10px 0}.phase ul{margin:12px 0 0;padding-left:18px;line-height:1.65;color:#4b5563}.phase-detail{margin-top:16px;background:#fff;border-radius:22px;border:1px solid var(--line);padding:24px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}.metric{border-left:4px solid var(--accent);padding:8px 0 8px 14px}.metric b{display:block;font-size:20px}.metric span{font-size:14px;color:var(--muted);line-height:1.6}
+    .risk-toolbar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}.filter.active{background:var(--ink);color:#fff}.risk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.risk-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:18px;display:flex;flex-direction:column;gap:12px}.risk-head{display:flex;justify-content:space-between;gap:12px}.risk-level{font-size:12px;font-weight:900;border-radius:999px;padding:5px 8px;align-self:flex-start}.high{background:rgba(180,35,24,.1);color:var(--risk)}.mid{background:rgba(183,121,31,.14);color:#8a5a15}.low{background:rgba(15,118,110,.1);color:var(--accent)}.risk-card p{line-height:1.65;color:#4b5563;margin:0}.risk-card .mitigation{font-size:14px;color:#344054;background:rgba(15,118,110,.06);border-radius:14px;padding:12px;line-height:1.55}
+    .matrix{width:100%;border-collapse:collapse;background:#fff;border-radius:18px;overflow:hidden}.matrix th,.matrix td{border-bottom:1px solid var(--line);padding:15px;text-align:left;vertical-align:top;line-height:1.6}.matrix th{background:rgba(24,33,42,.04);font-size:14px}.matrix tr:last-child td{border-bottom:0}
+    .source-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.source{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px;line-height:1.5}.source a{font-weight:800;color:var(--accent);text-decoration:none}.source small{display:block;color:var(--muted);margin-top:5px}
+    .modal{position:fixed;inset:0;background:rgba(24,33,42,.54);display:none;align-items:center;justify-content:center;padding:22px;z-index:999}.modal.open{display:flex}.modal-box{max-width:860px;width:100%;max-height:88vh;overflow:auto;background:#fff;border-radius:28px;padding:28px;box-shadow:var(--shadow)}.modal-head{display:flex;justify-content:space-between;gap:16px;align-items:start}.x{font-size:26px;background:transparent;box-shadow:none;padding:2px 8px}
+    footer{padding:40px 0 60px;color:var(--muted);font-size:14px;line-height:1.7}
+    @media (max-width:960px){.grid-hero,.two,.asset-map,.detail-inner,.phase-detail{grid-template-columns:1fr}.bridge{display:none}.proposal-grid,.four,.timeline,.risk-grid,.source-list{grid-template-columns:1fr}.three{grid-template-columns:1fr 1fr}.section-head{display:block}.detail-visual{border-right:0;border-bottom:1px solid var(--line)}}
+    @media (max-width:560px){.wrap{padding:0 16px}.topbar{display:block}.actions{justify-content:flex-start;margin-top:18px}.kpis,.three{grid-template-columns:1fr}section{padding:42px 0}.hero-card{padding:20px}.matrix{font-size:14px}.matrix th,.matrix td{padding:11px}}
+  </style>
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+  <header class="hero" id="top">
+    <div class="wrap">
+      <div class="topbar">
+        <div class="brand"><div class="mark">TCI</div><span>Strategic Interactive Brief</span></div>
+        <div class="actions">
+          <a class="btn primary" href="#proposals">查看四項提案</a>
+        </div>
+      </div>
+      <div class="grid-hero">
+        <div>
+          <span class="eyebrow">TCI × Solmetex</span>
+          <h1>把綠色生技 CDMO+ 接上全美牙科通路</h1>
+          <p class="lead">本互動頁將合作藍圖整理為「戰略背景、四項合作提案、三階段落地時程、風險提示與資料來源」。核心主張是：大江生醫以研發、醫材、在地製造與 ESG 能力補足 Solmetex 由牙科合規設備平台轉向高毛利臨床耗材平台的缺口。</p>
+        </div>
+        <aside class="hero-card" aria-label="合作關鍵數字">
+          <div class="kpis">
+            <div class="kpi"><b>4</b><span>合作主軸：口腔益生菌、Sterisil 在地化、再生牙科醫材、綠色診所聯盟</span></div>
+            <div class="kpi"><b>3</b><span>階段落地：0–6 個月、6–18 個月、18–36 個月</span></div>
+            <div class="kpi"><b>85k+</b><span>Solmetex 觸及牙科診所通路規模，適合放大診所端產品組合</span></div>
+            <div class="kpi"><b>36m</b><span>以三年作為從 OEM 試點到生態系壁壘的完整合作視窗</span></div>
+          </div>
+          <p class="disclaimer">註：本頁是策略提案介紹，不構成投資建議、醫療建議或法規保證；所有宣稱仍須以雙方實際資料、法規審查與臨床證據為準。</p>
+        </aside>
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav" aria-label="頁面導覽">
+    <div class="wrap tabs">
+      <button class="tab active" data-target="overview">總覽</button>
+      <button class="tab" data-target="logic">合作邏輯</button>
+      <button class="tab" data-target="proposals">四項提案</button>
+      <button class="tab" data-target="roadmap">三階段時程</button>
+      <button class="tab" data-target="risks">風險提示</button>
+      <button class="tab" data-target="sources">資料來源</button>
+    </div>
+  </nav>
+
+  <main>
+    <section id="overview">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">一頁看懂方案</h2>
+            <p class="section-sub">此合作不是單點代工，而是「TCI 產品與製程能力 × Solmetex 牙科通路與合規平台」的組合式戰略。</p>
+          </div>
+        </div>
+        <div class="three">
+          <article class="card">
+            <span class="tag">Why now</span>
+            <h3>牙科產業平台化</h3>
+            <p>美國牙科產業正在往大型 DSO（Dental Service Organization，牙科服務組織，專門為牙科診所和牙醫師處理非臨床業務的專業管理公司）集中，這讓採購決策更平台化，診所端需要能同時滿足臨床、耗材、合規與永續要求的一站式供應商。</p>
+          </article>
+          <article class="card">
+            <span class="tag warm">Why Solmetex</span>
+            <h3>從設備合規走向高頻耗材</h3>
+            <p>Solmetex 已由汞合金分離器、水線感染控制、隔離系統延伸至再生牙科材料；下一步需要更多高毛利、可複購的臨床消費品。</p>
+          </article>
+          <article class="card">
+            <span class="tag blue">Why TCI</span>
+            <h3>研發、製造、醫材與 ESG 一體化</h3>
+            <p>大江生醫可提供口腔益生菌、液態製程、醫材研發、猶他州在地製造與永續製造敘事，形成跨品類合作槓桿。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="logic">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">合作邏輯：兩端資產互補</h2>
+            <p class="section-sub">左端是大江生醫的研發、製程與製造資產；右端是 Solmetex 的診所通路、品牌併購平台與牙科合規服務。</p>
+          </div>
+        </div>
+        <div class="panel asset-map">
+          <div class="company">
+            <h3>大江生醫 TCI</h3>
+            <div class="asset"><div class="asset-icon">🧬</div><div><b>CDMO+ 與精準研發</b><br><span>功能性保健食品、護膚與醫材研發製造能力，可把臨床概念產品化。</span></div></div>
+            <div class="asset"><div class="asset-icon">🏭</div><div><b>美國猶他州 City Factory</b><br><span>支援北美在地生產、交付彈性與關稅／物流風險緩衝。</span></div></div>
+            <div class="asset"><div class="asset-icon">🦷</div><div><b>TCI188 口腔益生菌與 MBI 膠原醫材</b><br><span>可對接預防牙科與再生牙科兩個高價值場景。</span></div></div>
+            <div class="asset"><div class="asset-icon">🌱</div><div><b>RE100、循環經濟、零碳敘事</b><br><span>可協助診所端與 DSO 建立 ESG 採購理由。（註：大江生醫於 2018 年成為台灣第一家加入 RE100 的企業，宣示最晚於 2050 年達成 100% 再生能源）</span></div></div>
+          </div>
+          <div class="bridge"><span>×</span></div>
+          <div class="company">
+            <h3>Solmetex</h3>
+            <div class="asset"><div class="asset-icon">🏥</div><div><b>全美牙科診所與 DSO 通路</b><br><span>具備診所端合規設備與耗材銷售基礎。</span></div></div>
+            <div class="asset"><div class="asset-icon">💧</div><div><b>Sterisil 水線感染控制</b><br><span>可與大江在地製程合作，強化供應鏈與品質控制。</span></div></div>
+            <div class="asset"><div class="asset-icon">🦴</div><div><b>Impladent 再生牙科材料</b><br><span>與 MBI 膠原蛋白材料形成 OEM、共研與組合銷售空間。</span></div></div>
+            <div class="asset"><div class="asset-icon">♻️</div><div><b>牙科廢棄物閉環合規</b><br><span>NXT Hg5 與回收證書具備綠色診所方案的端點觸角。</span></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="proposals">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">四項合作提案</h2>
+            <p class="section-sub">點選任一提案卡片，可切換下方詳情與價值創造流程。</p>
+          </div>
+        </div>
+        <div class="proposal-grid" id="proposalGrid"></div>
+        <div class="panel detail" id="proposalDetail"></div>
+      </div>
+    </section>
+
+    <section id="roadmap">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">三階段落地時程</h2>
+            <p class="section-sub">建議採「先交易、再共研、後生態」：先做低摩擦的 OEM／通路合作，再進入研發與法規，最後建立綠色診所聯盟。</p>
+          </div>
+        </div>
+        <div class="timeline" id="timeline"></div>
+        <div class="phase-detail" id="phaseDetail"></div>
+      </div>
+    </section>
+
+    <section id="risks">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">風險提示與控管</h2>
+            <p class="section-sub">本方案最容易被高估之處，在於把「市場敘事」直接等同於「可銷售產品」。建議每一階段均設停損點與驗證門檻。</p>
+          </div>
+        </div>
+        <div class="risk-toolbar" id="riskToolbar">
+          <button class="filter active" data-filter="all">全部</button>
+          <button class="filter" data-filter="regulatory">法規／宣稱</button>
+          <button class="filter" data-filter="commercial">商業化</button>
+          <button class="filter" data-filter="operation">製造／供應鏈</button>
+          <button class="filter" data-filter="governance">治理／合作</button>
+        </div>
+        <div class="risk-grid" id="riskGrid"></div>
+      </div>
+    </section>
+
+    <section id="scorecard">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">建議評估儀表板</h2>
+            <p class="section-sub">合作洽談時，不宜只談概念。可用下列指標要求雙方每月更新，讓提案逐步收斂為可執行專案。</p>
+          </div>
+        </div>
+        <div class="panel" style="padding:10px;overflow:auto">
+          <table class="matrix">
+            <thead><tr><th>階段</th><th>關鍵問題</th><th>可量化指標</th><th>Go / No-Go 門檻</th></tr></thead>
+            <tbody>
+              <tr><td><b>0–6 個月</b></td><td>能否快速建立低風險收入或產品線補強？</td><td>OEM 條款、首批試產良率、通路導入診所數、單位成本差異</td><td>至少完成一項產品或耗材的試產／通路測試，且毛利與交期優於既有方案。</td></tr>
+              <tr><td><b>6–18 個月</b></td><td>臨床證據與產品宣稱是否足以支撐專業牙科通路？</td><td>臨床資料完整性、穩定性測試、法規分類、KOL 試用回饋、DSO 採購意願</td><td>完成產品定位、宣稱邊界與法規路徑確認，避免未經核准的醫療功效主張。</td></tr>
+              <tr><td><b>18–36 個月</b></td><td>能否形成競爭者難以複製的生態系？</td><td>加入聯盟診所數、耗材複購率、ESG 證書使用率、Scope 3 佐證資料完整性</td><td>綠色診所方案必須能降低採購摩擦，而不只是品牌行銷口號。</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="sources">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">資料來源與查證點</h2>
+            <p class="section-sub">本頁內容以附件提案為主，並整理附件中可公開查證的主要來源連結。外部事實仍建議在正式提案前再次核對原始文件、財報與法規文件。</p>
+          </div>
+        </div>
+        <div class="source-list">
+          <div class="source"><a href="https://www.gtcr.com/gtcr-announces-200-million-strategic-minority-investment-in-solmetex/" target="_blank" rel="noopener">GTCR 對 Solmetex 的戰略少數股權投資</a><small>查證投資金額、用途與擴張策略。</small></div>
+          <div class="source"><a href="https://clinicaltrials.gov/study/NCT06141083" target="_blank" rel="noopener">ClinicalTrials.gov：NCT06141083</a><small>查證 TCI188 口腔益生菌臨床試驗登錄資訊。</small></div>
+          <div class="source"><a href="https://solmetex.com/wp-content/uploads/2022/04/Solmetex-LLC-Acquires-Sterisil-Inc.pdf" target="_blank" rel="noopener">Solmetex 收購 Sterisil 公告</a><small>查證 Sterisil 水線感染控制併購背景。</small></div>
+          <div class="source"><a href="https://www.prnewswire.com/news-releases/solmetex-llc-acquires-impladent-ltd-301842342.html" target="_blank" rel="noopener">Solmetex 收購 Impladent 公告</a><small>查證再生牙科材料產品線擴張。</small></div>
+          <div class="source"><a href="https://www.tci-bio.com/about-our-service/" target="_blank" rel="noopener">TCI CDMO+ Service</a><small>查證大江生醫 CDMO+ 服務定位。</small></div>
+          <div class="source"><a href="https://www.tci-bio.com/global-operation/" target="_blank" rel="noopener">TCI Global Operation</a><small>查證 American Fork, Utah 據點。</small></div>
+          <div class="source"><a href="https://www.nutraceuticalsworld.com/breaking-news/tci-biotech-announces-26-million-facility-expansion/" target="_blank" rel="noopener">TCI Biotech 美國廠擴建報導</a><small>查證 2,600 萬美元擴建與北美製造布局。</small></div>
+          <div class="source"><a href="https://mbi-bio.com/zh-hant/" target="_blank" rel="noopener">和康生技 MBI</a><small>查證膠原蛋白與醫材能力。</small></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <b>使用建議：</b>正式對外前，建議將本頁中的「風險提示」保留，並把各項數字改為雙方內部確認版本；若作為會議材料，可直接投影展示。
+    </div>
+  </footer>
+
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="詳細說明">
+    <div class="modal-box">
+      <div class="modal-head"><h2 id="modalTitle"></h2><button class="x" onclick="closeModal()">×</button></div>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+  <script>
+    const proposals = [
+      {
+        id:'microbiome', num:'提案一', tag:'預防牙科 × 高頻耗材',
+        title:'牙科級口腔益生菌與益菌保養產品線',
+        bullets:['以 TCI188 臨床試驗作為專業通路敘事基礎','咀嚼片、含片、液態隨身包、漱口水等劑型','定位為洗牙、牙周處置或術後居家調理方案'],
+        value:'大江可與 Solmetex 聯名開發專供牙醫與大型 DSO 通路的「Solmetex Pro-Microbiome」專業護理產品線，搶攻 2035 年將突破 11 億美元的全球口腔微生態預防醫學市場。此合作以大江專利口腔益生菌株 TCI188 為核心，該菌株經台北醫學大學附設醫院臨床試驗證實，能顯著改善重度牙周炎患者的牙周囊袋深度、牙菌斑指數、臨床附著水平及牙齦指數，並能有效調控發炎因子，進而降低全身性發炎指標超敏C反應蛋白濃度，改善口臭。生產端將採用大江最新完全無氧製程液態技術，並委由其美國猶他州廠進行在地化代工，打造高穩定性的「美國製造」液態隨身包或咀嚼錠。最終，Solmetex 可憑藉其覆蓋全美超過 85,000 家診所之通路優勢，將此產品定位為洗牙或術後的自費居家預防處方，助其成功轉型為高頻次、高毛利的牙科臨床消費品龍頭。',
+        flow:['TCI188 / doubleNUTRI® ZerO₂™','牙科級產品設計','診所處方與衛教','DSO 批量導入'],
+        caution:'臨床試驗登錄不等於功效已被監管機關核准；產品宣稱必須先確認保健食品、醫療器材或藥品邊界。'
+      },
+      {
+        id:'sterisil', num:'提案二', tag:'在地製造 × 品質升級',
+        title:'Sterisil 淨水耗材在地化生產與品控升級',
+        bullets:['將 Citrisil 類錠劑與淨水消殺耗材轉由猶他州廠試產','主打 Made in USA、交期縮短與關稅／物流風險緩衝','導入高自動化檢測與批次追溯'],
+        value:'大江可協助 Solmetex 旗下牙科水線消殺龍頭 Sterisil®，將其核心循環耗材——Citrisil™ 水線控制錠與衝擊消毒錠之生產，導入大江美國猶他州廠。此合作旨在以最短路徑建立共同的早期商業成果，先從成熟耗材的製程轉移驗證合作默契。大江猶他廠製品不僅符合「美國製造」屬性（避免關稅、地緣政治等風險），也能藉這項合作引進本廠先進的「鷹眼監控系統」，精準識別瑕疵品，以高達 99.9% 的檢測準確率，確保製品符合美國 FDA 的高標準。',
+        flow:['既有 Sterisil SKU','製程轉移與試產','品質檢測與成本比較','北美診所耗材供應'],
+        caution:'水線消毒耗材牽涉 EPA／FDA／標示與殺菌宣稱；轉廠前需完整釐清配方、規格、登記與品質責任。'
+      },
+      {
+        id:'regenerative', num:'提案三', tag:'再生醫材 × OEM / 共研',
+        title:'MBI 與 Impladent 再生牙科生物材料合作',
+        bullets:['HealiAid 膠原蛋白傷口敷料可作為 Impladent 產品線互補耗材','與 OsteoGen 骨移植塞組成拔牙創口修復組合','中期共研新型 GTR / GBR 膜或複合型緩釋生骨材料'],
+        value:'大江旗下和康生技（MBI）可與 Solmetex 旗下 Impladent 展開「雙層次再生醫材合作」：第一，進行「通路互補搭售」，將和康已獲美國 FDA 510(k) 許可、具 3D 仿生多孔結構且能 30 秒快速止血的 HealiAid® 膠原蛋白傷口敷料，以 OEM 形式併同 Impladent的明星產品 OsteoGen® 骨移植塞進行聯合行銷，為美國市場提供一站式拔牙與創口修復組合；第二，進行「技術協同研發」，結合大江醫材實驗室（Maxi Lab）的交聯技術與 Impladent 的專利微晶，共同研發下一代「生物活性複合引導組織再生膜（GTR Membrane）」。',
+        flow:['MBI 膠原醫材','Impladent 通路與臨床場景','OEM / 聯合包裝','新型 GTR / GBR 共研'],
+        caution:'醫材 OEM 與共研須明確定義設計管制、510(k) 路徑、品質系統責任、上市後監督與不良事件回報。'
+      },
+      {
+        id:'green', num:'提案四', tag:'ESG × 生態系壁壘',
+        title:'共建綠色診所聯盟與零碳耗材閉環',
+        bullets:['以 TCI 綠色製造與 Solmetex 汞合金回收／水質管理打包','推出綠色漱口水、口腔噴霧、術後修復包等永續耗材','讓 DSO 取得採購、合規與 ESG 對外揭露素材'],
+        value:'大江可與 Solmetex 聯手發起「全美綠色牙科診所聯盟」，將大江的 RE100 零碳製造與農副產物循環經濟技術深度落實於診所日常營運。具體合作作法包括：一、綠色消耗品研發與零碳代工：為診所代工開發「減塑紙盒裝漱口水」與「零碳口腔噴霧」等純素、無防腐劑之潔淨配方口腔清潔消耗品。二、診所設備與日常消耗品深度打包：Solmetex 將這些大江製造的永續綠色消耗品，與自身的產品服務（如處理的汞合金廢物的 NXT Hg5™ 系列等）深度整合，向終端診所推出一站式綠色升級方案。三、提供範疇三抵免憑證與標章：共同為合作診所核發「綠色永續牙科診所」標章，並提供量化的碳減排與汞減量憑證，協助連鎖 DSO 抵免企業範疇三（Scope 3，其他間接排放）的碳排放額度，滿足其 ESG 需求。',
+        flow:['零碳 / 循環製造','牙科廢棄物回收','綠色診所標章','DSO ESG 採購方案'],
+        caution:'Scope 3 抵減與綠色標章不可只靠行銷語言；需第三方查證、碳盤查邊界與可審計資料。'
+      }
+    ];
+
+    const phases = [
+      {range:'0–6 個月', title:'啟動：低摩擦商業合作', items:['HealiAid 導入 Impladent 產品線','Sterisil 耗材轉廠評估與試產','完成商務條款、責任邊界與第一批 SKU 選定'], metrics:[['速度','簽署 MOU / OEM term sheet'],['成本','試產單位成本與交期差異'],['品質','批次良率與缺陷率']]},
+      {range:'6–18 個月', title:'深化：共研與法規路徑', items:['開發 TCI188 專業牙科通路產品','啟動 GTR / GBR 膜或複合材料共同研發','建立臨床證據、穩定性、宣稱與法規分類'], metrics:[['證據','臨床資料與試用回饋'],['法規','產品分類與申報路徑'],['市場','KOL / DSO 導入意願']]},
+      {range:'18–36 個月', title:'放大：綠色診所生態系', items:['發起全美綠色牙科診所聯盟','整合消耗品、水線系統與汞合金回收證書','建立診所端 ESG 採購與複購機制'], metrics:[['規模','聯盟診所數與 DSO 覆蓋'],['黏著','耗材複購率與客單價'],['可信度','碳與回收資料可審計性']]}
+    ];
+
+    const risks = [
+      {cat:'regulatory', level:'高', title:'產品宣稱與法規分類風險', body:'口腔益生菌、漱口水、術後修復包若涉及治療、抗菌、牙周改善等宣稱，可能落入不同監管類別。', mitigation:'先做「宣稱地圖」：列出允許、灰區、禁止宣稱；上市前由美國法規顧問審核標示與行銷素材。'},
+      {cat:'regulatory', level:'高', title:'臨床證據不足以支持專業通路銷售', body:'ClinicalTrials.gov 登錄與研究設計可作為敘事基礎，但不代表產品已取得醫療功效認可。', mitigation:'將臨床證據分為探索、支撐、註冊三層級；每一層對應不同產品定位與銷售話術。'},
+      {cat:'operation', level:'中', title:'製程轉移與品質責任不清', body:'Sterisil 類耗材轉由猶他州廠生產，需處理配方、設備、檢測、批次追溯與客訴責任。', mitigation:'先選 1–2 個低複雜度 SKU 試點，建立品質協議、變更管制與供應中斷備案。'},
+      {cat:'commercial', level:'中', title:'DSO 採購不一定接受新品牌敘事', body:'大型連鎖牙科集團更重視臨床流程、價格、合規風險與採購效率，未必因 ESG 或益生菌概念即採購。', mitigation:'先做 DSO voice-of-customer 訪談，以診所工作流程與毛利模型驗證需求，而非只做產品展示。'},
+      {cat:'governance', level:'中', title:'合作治理、IP 與資料權屬風險', body:'共研產品會牽涉菌株、配方、臨床資料、商標、通路客戶資料與改良技術所有權。', mitigation:'MOU 階段即定義背景 IP、前景 IP、共同成果、區域授權、退出條款與競業限制。'},
+      {cat:'commercial', level:'中', title:'私募股權回報壓力造成策略短期化', body:'Solmetex 背後投資人可能偏好快速收入與併購整合成果，長期共研項目可能被重新排序。', mitigation:'把合作拆成可獨立結算的里程碑；用 OEM／通路合作創造短期成果，再換取共研承諾。'},
+      {cat:'operation', level:'低', title:'關稅與物流假設變動', body:'在地化製造可降低部分風險，但政策、原料來源與運輸成本仍可能變動。', mitigation:'建立 landed cost (到岸成本) 模型，每季更新關稅、原料、匯率與運輸敏感度。'},
+      {cat:'governance', level:'高', title:'ESG 綠色宣稱被質疑為漂綠', body:'綠色診所標章與碳抵減若缺乏第三方查證，反而可能成為品牌風險。', mitigation:'採用可審計邊界、第三方查證與透明揭露；避免過度承諾 Scope 3 抵減效果。'}
+    ];
+
+    const proposalGrid = document.getElementById('proposalGrid');
+    const proposalDetail = document.getElementById('proposalDetail');
+    function renderProposals(activeId='microbiome'){
+      proposalGrid.innerHTML = proposals.map(p => `
+        <article class="card proposal ${p.id===activeId?'active':''}" data-id="${p.id}" tabindex="0">
+          <div class="num">${p.num}</div>
+          <span class="tag ${p.id==='green'?'warm':p.id==='regenerative'?'blue':''}">${p.tag}</span>
+          <h3>${p.title}</h3>
+          <ul>${p.bullets.map(b=>`<li>${b}</li>`).join('')}</ul>
+        </article>`).join('');
+      const p = proposals.find(x=>x.id===activeId);
+      proposalDetail.innerHTML = `
+        <div class="detail-inner">
+          <div class="detail-visual">
+            <span class="tag">${p.num}</span>
+            <h3>${p.title}</h3>
+            <div class="flow">${p.flow.map((f,i)=>`${i?'<span class="arrow">→</span>':''}<span class="flow-item">${f}</span>`).join('')}</div>
+          </div>
+          <div class="detail-copy">
+            <h3>策略價值與控管重點</h3>
+            <p><b>核心價值：</b>${p.value}</p>
+            <p><b>主要風險：</b>${p.caution}</p>
+            <div class="chips">${p.bullets.map(b=>`<span class="chip">${b}</span>`).join('')}</div>
+            <p style="margin-top:18px"><button onclick="openProposalModal('${p.id}')">展開洽談問題清單</button></p>
+          </div>
+        </div>`;
+      [...proposalGrid.querySelectorAll('.proposal')].forEach(el=>{
+        el.addEventListener('click',()=>renderProposals(el.dataset.id));
+        el.addEventListener('keydown',(e)=>{if(e.key==='Enter')renderProposals(el.dataset.id)});
+      })
+    }
+
+    function openProposalModal(id){
+      const p = proposals.find(x=>x.id===id);
+      const questions = {
+        microbiome:['TCI188 臨床資料目前可支撐哪些宣稱？','產品分類應定位為 dietary supplement、cosmetic、medical food 還是 device accessory？','牙醫診所如何收費、如何衛教、如何讓患者複購？'],
+        sterisil:['哪些 SKU 適合先轉廠？','現有配方與登記文件是否允許製造地變更？','大江猶他州廠的品質系統與 Solmetex 客訴流程如何銜接？'],
+        regenerative:['HealiAid 與 OsteoGen 是否能聯合包裝或搭售？','OEM 後品牌歸屬、產品責任與上市後監督由誰負責？','共研 GTR / GBR 膜的 510(k) predicate device (前例器械) 是什麼？'],
+        green:['綠色診所標章由誰認證？','Scope 3 數據邊界與第三方查證方法為何？','DSO 願意為 ESG 組合方案支付多少溢價？']
+      }[id];
+      document.getElementById('modalTitle').textContent = p.title;
+      document.getElementById('modalBody').innerHTML = `<p style="line-height:1.8;color:#4b5563">建議在正式洽談前，先把以下問題釐清，避免提案停留在概念層次。</p><ol style="line-height:1.9">${questions.map(q=>`<li>${q}</li>`).join('')}</ol>`;
+      document.getElementById('modal').classList.add('open');
+    }
+    function closeModal(){document.getElementById('modal').classList.remove('open')}
+
+    const timeline = document.getElementById('timeline');
+    const phaseDetail = document.getElementById('phaseDetail');
+    function renderPhases(active=0){
+      timeline.innerHTML = phases.map((p,i)=>`<article class="phase ${i===active?'active':''}" data-i="${i}"><small>${p.range}</small><h3>${p.title}</h3><ul>${p.items.map(it=>`<li>${it}</li>`).join('')}</ul></article>`).join('');
+      const p = phases[active];
+      phaseDetail.innerHTML = p.metrics.map(m=>`<div class="metric"><b>${m[0]}</b><span>${m[1]}</span></div>`).join('');
+      [...timeline.querySelectorAll('.phase')].forEach(el=>el.addEventListener('click',()=>renderPhases(Number(el.dataset.i))));
+    }
+
+    const riskGrid = document.getElementById('riskGrid');
+    function renderRisks(filter='all'){
+      const list = filter==='all'?risks:risks.filter(r=>r.cat===filter);
+      riskGrid.innerHTML = list.map(r=>`<article class="risk-card"><div class="risk-head"><h3 style="margin:0;font-size:19px">${r.title}</h3><span class="risk-level ${r.level==='高'?'high':r.level==='中'?'mid':'low'}">${r.level}風險</span></div><p>${r.body}</p><div class="mitigation"><b>控管：</b>${r.mitigation}</div></article>`).join('');
+    }
+    document.getElementById('riskToolbar').addEventListener('click',e=>{
+      if(!e.target.matches('.filter'))return;
+      document.querySelectorAll('.filter').forEach(x=>x.classList.remove('active'));
+      e.target.classList.add('active');
+      renderRisks(e.target.dataset.filter);
+    });
+
+    document.querySelectorAll('.tab').forEach(tab=>{
+      tab.addEventListener('click',()=>{
+        document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.target).scrollIntoView({behavior:'smooth',block:'start'});
+      });
+    });
+
+    window.addEventListener('scroll',()=>{
+      const max = document.documentElement.scrollHeight - innerHeight;
+      document.getElementById('progress').style.width = `${Math.min(100,scrollY/max*100)}%`;
+    });
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+    renderProposals();renderPhases();renderRisks();
+  </script>
+</body>
+</html>
